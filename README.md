@@ -167,7 +167,7 @@ input text : 中共中央总书记、国家主席江泽民发表１９９８年�
     $ BASE_DIR="$(pwd)"
     
     $ docker run  -t --rm  \
-        -p 8088:8500 \
+        -p 8500:8500 \
         -p 8501:8501 \
         --mount  type=bind,source=$BASE_DIR/result/ner/saved_model,target=/models/ner \
         -e MODEL_NAME=ner \

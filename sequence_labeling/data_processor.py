@@ -75,12 +75,12 @@ class DataProcessor(object):
                 if word and tag:
                     tokens.append(word.lower())
                     target.append(tag)
-                    # target.append(tag.replace("I-","B-").replace("E-","B-"))
-                    # target.append(tag.replace("-ORG","-PER"))
+
+
         random.shuffle(self.data)
 
     def convert_tag(self, tag_list):
-        return [self.tag_to_id[tag.replace("_","-").replace("M-","I-")] for tag in tag_list]
+        return [self.tag_to_id[tag] for tag in tag_list]
 
     def prepare_batch(self):
         '''
