@@ -426,7 +426,7 @@ if __name__ == "__main__":
                         "init_checkpoint": "bert_model/bert_model.ckpt",
                         "vocab_dir": "bert_model/vocab.txt",
                         "checkpoint_dir": "./result/{task_name}/ckpt_model/{model_version}".format(task_name=task_name,model_version = time.strftime('%Y%m%d')),# %Y%m%d%H%M%S
-                        "checkpoint_path": "./result/{task_name}/ckpt_model/{model_version}/ner.org.ckpt".format(task_name=task_name,model_version = time.strftime('%Y%m%d')),
+                        "checkpoint_path": "./result/{task_name}/ckpt_model/{model_version}/{task_name}.ckpt".format(task_name=task_name,model_version = time.strftime('%Y%m%d')),
                         "train_file": "data/{task_name}/train".format(task_name=task_name),
                         "dev_file": "data/{task_name}/dev".format(task_name=task_name),
                         "predict_file": "data/{task_name}/predict".format(task_name=task_name),

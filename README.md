@@ -7,6 +7,7 @@
  - tensorflow 1.14.0
  - python 3.5.2
 
+
 ## 安装依赖
         
     cd sequence_labeling
@@ -48,12 +49,6 @@
     ├── optimization.py
     ├── optimization_test.py
     ├── predicting_movie_reviews_with_bert_on_tf_hub.ipynb
-    ├── __pycache__
-    │   ├── __init__.cpython-35.pyc
-    │   ├── modeling.cpython-35.pyc
-    │   ├── optimization.cpython-35.pyc
-    │   └── tokenization.cpython-35.pyc
-    ├── README.md
     ├── requirements.txt
     ├── run_classifier.py
     ├── run_classifier_with_tfhub.py
@@ -97,6 +92,29 @@
     年      E_TIME
     讲      O
     
+
+## 项目结构
+
+|  路径| 说明 | 
+| --- | --- | 
+|./bert| bert google 官方模型|
+|./bert_model|bert 中文预训练模型|
+|./data||
+|./data/ner||
+|./data/ner/dev|验证数据|
+|./data/ner/train|训练数据|
+|./data_processor.py|数据预处理脚本|
+|./helper.py|相关模型函数|
+|./log|日志记录|
+|./model_client.py|调用模型client客户端|
+|./model.py|主要模型|
+|./my_log.py|日志模块|
+|./requirement.txt|项目模型依赖|
+|./result||
+|./result/ner||
+|./result/ner/ckpt_model| ckpt 模型结果|
+|./result/ner/saved_model|savedModel模型结果|
+|./tokenization.py|对token的处理脚本|
 
 ## 运行
 #### 训练
