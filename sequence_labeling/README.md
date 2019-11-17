@@ -83,15 +83,21 @@
     纪      O
     —       O
     —       O
-    一      B_TIME
-    九      M_TIME
-    九      M_TIME
-    八      M_TIME
-    年      E_TIME
-    新      B_TIME
-    年      E_TIME
+    一      B-TIME
+    九      I-TIME
+    九      I-TIME
+    八      I-TIME
+    年      E-TIME
+    新      B-TIME
+    年      E-TIME
     讲      O
     
+说明：原始数据来源 人民日报1998年01月-06月共6个月标记语料库。根据原始数据，进行清洗整理，生成模型所需训练数据：
+    
+- **train 12043502 条记录**
+- **dev    245087 条记录**
+
+如需数据用于学术研究等，可以联系 wuchenglong126@126.com，若用于商业用途，请联系人民日报官方。
 
 ## 项目结构
 
@@ -122,7 +128,7 @@
     $ cd sequence_labeling
     $ python3 model.py -t ner -e train
     
-![](media/15736923637849.jpg)
+![](../media/15736923637849.jpg)
 
 ### 训练结果
 
@@ -197,7 +203,7 @@ serving 服务调用(**grpc**)：
     $ python3 model_client.py
 
 
-![](media/15736926131208.jpg)
+![](../media/15736926131208.jpg)
 
 
 
