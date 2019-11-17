@@ -5,15 +5,15 @@
 ## 目录
 
 * [NLP](#NLP)
-    * [sequence labeling](###sequence-labeling)
-    * [information extraction](###information-extraction)
+    * [sequence labeling](#sequence-labeling)
+    * [information extraction](#information-extraction)
 * KG
     * [待补充]
 
     
 ## NLP
 
-### sequence labeling
+### [sequence labeling](./sequence_labeling)
 **模型：** Bert + BiLSTM + CRF
 **模型输入：** 一段文本。
 **模型输出：** 文本包含的机构、人名、时间等实体。
@@ -42,7 +42,7 @@
 
 [>>>>>>详情<<<<<<](./sequence_labeling)
 
-### information extraction
+### [information extraction](./information_extraction)
 
 **模型：** Bert
 **模型输入：** 实体A，实体B，包含实体A和实体B的文本。
