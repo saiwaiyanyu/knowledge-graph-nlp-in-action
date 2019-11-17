@@ -13,11 +13,10 @@
     
 ## NLP
 
-### [sequence labeling](./sequence_labeling)
-
-**模型：**Bert + BiLSTM + CRF
-**模型输入：**一段文本。
-**模型输出：**文本包含的机构、人名、时间等实体。
+### sequence labeling
+**模型：** Bert + BiLSTM + CRF
+**模型输入：** 一段文本。
+**模型输出：** 文本包含的机构、人名、时间等实体。
     
     input text : 中共中央总书记、国家主席江泽民发表１９９８年新年讲话
     [
@@ -41,11 +40,13 @@
         }
     ]
 
-### [information extraction](./information_extraction)
+[>>>>>>详情<<<<<<](./sequence_labeling)
 
-**模型：**Bert
-**模型输入：**实体A，实体B，包含实体A和实体B的文本。
-**模型输出：**文本包含的机构、人名、时间等实体。
+### information extraction
+
+**模型：** Bert
+**模型输入：** 实体A，实体B，包含实体A和实体B的文本。
+**模型输出：** 文本包含的机构、人名、时间等实体。
 
     input: 喜剧之王      周星驰  如何演好自己的角色，请读《演员自我修养》《喜剧之王》周星驰崛起于穷困潦倒之中的独门秘笈
     
@@ -62,5 +63,5 @@
         ...
     }
     
-
+[>>>>>>详情<<<<<<](./information_extraction)
 
