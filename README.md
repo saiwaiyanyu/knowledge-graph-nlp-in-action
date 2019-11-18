@@ -6,7 +6,7 @@
 
 * [NLP](#NLP)
     * [x] [sequence labeling](#sequence-labeling)
-    * [x][information extraction](#information-extraction)
+    * [x] [information extraction](#information-extraction)
     * [ ] sentiment analysis
 * KG
     * [ ] TODO
