@@ -68,7 +68,7 @@
     
 ## 相关文档
 
-- [ ] [`docker` 安装](./docs/docker安装.md)
+- [x] [`docker` 安装](./docs/docker安装.md)
 - [ ] [`savedModel` 保存和 `tensorflow-serving` 部署](./docs/savedModel保存和tensorflow-serving部署.md)
 - [ ] [`python` 和 `java` 调用 `tensorflow-serving` 服务](./docs/python和java调用tensorflow-serving服务.md)
 
