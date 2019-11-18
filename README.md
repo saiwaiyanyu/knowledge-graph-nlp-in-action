@@ -5,10 +5,11 @@
 ## 目录
 
 * [NLP](#NLP)
-    * [sequence labeling](#sequence-labeling)
-    * [information extraction](#information-extraction)
+    * [x] [sequence labeling](#sequence-labeling)
+    * [x][information extraction](#information-extraction)
+    * [ ] sentiment analysis
 * KG
-    * [待补充]
+    * [ ] TODO
 
     
 ## NLP
@@ -42,8 +43,6 @@
         }
     ]
 
-[>>>>>>详情<<<<<<](./sequence_labeling)
-
 ### [information extraction](./information_extraction)
 
 **模型：** Bert
@@ -67,5 +66,9 @@
         ...
     }
     
-[>>>>>>详情<<<<<<](./information_extraction)
+## 相关文档
+
+- [ ] [`docker` 安装](./docs/docker安装.md)
+- [ ] [`savedModel` 保存和 `tensorflow-serving` 部署](./docs/savedModel保存和tensorflow-serving部署.md)
+- [ ] [`python` 和 `java` 调用 `tensorflow-serving` 服务](./docs/python和java调用tensorflow-serving服务.md)
 
