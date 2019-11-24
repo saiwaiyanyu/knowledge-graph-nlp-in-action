@@ -7,7 +7,7 @@
 * [NLP](#NLP)
     * [x] [sequence labeling](#sequence-labeling)
     * [x] [information extraction](#information-extraction)
-    * [ ] sentiment analysis
+    * [x] [seq2seq](#seq2seq)
 * KG
     * [ ] TODO
 
@@ -65,6 +65,32 @@
         "制片人": 0.0001938332716235891,
         ...
     }
+    
+> ***** Eval results *****
+eval_accuracy = 0.97999
+eval_loss = 0.06774125
+global_step = 19000
+loss = 0.06772543
+
+
+
+### [seq2seq](./seq2seq)
+
+**模型：** seq2seq greedy （QA）
+
+**模型输入：** 输入你的梦境。
+
+**模型输出：** 返回梦境解析的结果（**周公解梦**数据训练）。
+
+    ********************
+    input your dream: 梦见中奖了
+    dream: 梦见中奖了
+    dream decoding: 预示你事业上将面临挑战和机遇，会有大发展。 
+    
+    ********************
+    input your dream: 梦见大富豪
+    dream: 梦见大富豪
+    dream decoding: 预示着自己生活会很愉快。
     
 ## 相关文档
 
