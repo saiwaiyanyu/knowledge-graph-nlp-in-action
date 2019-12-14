@@ -184,3 +184,65 @@ ORDER BY postedPostsCount DESC
 LIMIT 10
 ;
 
+
+
+
+
+
+// 最短路径
+MATCH path = shortestPath((u1:User{id:"5a8d0c5df265da4e9d223ba5"})-[:follow*1..9]-(u2:User{id:"551d677ee4b0cd5b623f49cb"}))
+RETURN path,u1.username,u2.username
+LIMIT 1;
+
+// 最短路径
+MATCH path = shortestPath((u1:User{id:"5a8d0c5df265da4e9d223ba5"})-[:follow*1..9]-(u2:User{id:"5de0f0a0f265da06113c700f"}))
+RETURN path,u1.username,u2.username
+LIMIT 1
+;
+
+
+
+// 最长路径
+MATCH path = (u1:User)-[:follow*6..6]-(u2:User)
+WHERE  ALL(u IN  [u0 IN NODES(path)| size([m IN FILTER(f IN NODES(path) WHERE ID(f)=ID(u0))])] WHERE u<2) 
+RETURN path
+LIMIT 1;
+
+
+
+// 最长路径
+MATCH (u:User) WHERE NOT EXISTS( (u)<-[:follow*1..6]-(u) ) 
+MATCH path = (u)<-[:follow*7..7]-(u) 
+WHERE ALL(u IN  [u0 IN FILTER(n IN NODES(path) WHERE ID(n)<>ID(u)) | size([m IN FILTER(f IN NODES(path) WHERE ID(f)=ID(u0))])] WHERE u<2) 
+RETURN u.username,path, LENGTH(path)
+// ORDER BY LENGTH(path) DESC 
+LIMIT 1
+;
+
+
+
+
+// 关注他的用户也关注了
+MATCH(u0:User{id:'551d677ee4b0cd5b623f49cb'})
+MATCH (u0)<-[:follow]-(u1:User)-[:follow]->(g:User)
+WHERE NOT ID(u0)=ID(g)
+WITH u0, g, COUNT(DISTINCT u1) AS sameFollowNum
+RETURN u0.username,u0.id, g.username,g.id, sameFollowNum 
+ORDER BY sameFollowNum DESC
+LIMIT 20
+;
+
+
+
+// 和类似的用户也关注了
+MATCH(u0:User{id:'5a8d0c5df265da4e9d223ba5'})
+MATCH (u0)-[:follow]->(s:User)<-[:follow]-(u1)-[:follow]->(g:User) 
+WHERE NOT (u0)-[:follow]->(g)
+WITH u0, g,COUNT(DISTINCT s) AS sameFolloweeNum, COUNT(DISTINCT u1) AS sameFollowNum
+RETURN u0.username, g.username, sameFolloweeNum,sameFollowNum
+ORDER BY sameFollowNum DESC
+LIMIT 10
+;
+
+
+
